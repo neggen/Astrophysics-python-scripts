@@ -24,7 +24,7 @@ def main():
 	infile=fits.open("raw/S20180408S0237.fits")
 	
 	#sanity check
-	print infile.info()
+	print(infile.info())
 	
 	#initialize output file and variables
 	hdul=fits.HDUList()
@@ -36,7 +36,7 @@ def main():
 		#grab extension of image and then open data of extension
 		ext=infile[i+1]
 		data=ext.data
-		print data.shape
+		print(data.shape)
 
 		#pull overscan region
 		biassec_lis=ext.header['BIASSEC'].split('[')[1].split(']')[0].split(',')
@@ -46,9 +46,9 @@ def main():
 		overscan=convolve(np.median(data[:int(biassec[1][1]),int(biassec[0][0]):int(biassec[0][1])],axis=1),Box1DKernel(3))
 		
 		#sanity checks
-		print int(biassec[0][0]),int(biassec[0][1]),int(biassec[1][0]),int(biassec[1][1])
-		print data[100,100],overscan[100]
-		print data.shape,overscan.shape
+		print(int(biassec[0][0]),int(biassec[0][1]),int(biassec[1][0]),int(biassec[1][1]))
+		print(data[100,100],overscan[100])
+		print(data.shape,overscan.shape)
 
 		#data has type int16 so convert to int
 		subdata=np.copy(data).astype(int)
@@ -70,7 +70,7 @@ def main():
 		plt.close()
 
 		#more sanity
-		print subdata[100,100]
+		print(subdata[100,100])
 
 		#convert back to int16 before saving to file
 		subdata=np.int16(subdata)
