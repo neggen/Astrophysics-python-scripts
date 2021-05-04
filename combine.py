@@ -11,7 +11,7 @@ import sys
 This Script takes in a list of datacubes in command line, aligns them in
 the spectral dimension, and then combines them together by using the median. 
 Median was chosen to suppress the influence of outliers that exist in the 
-datacubes, and the variance is propogated correctly as well.
+datacubes, and the variance is propagated correctly as well.
 '''
 
 if len(sys.argv) < 3:
