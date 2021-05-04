@@ -91,7 +91,7 @@ for i in range(0,(len(sys.argv) - 2)):
 	intermask = np.ma.make_mask(interdq)
 	#intermask=~intermask
 	
-	#Save resampled datacube if desired to double check validity
+	#Save resampled datacube to file if desired to double check validity
 	# cube[1].data=intersci
 	# cube[2].data=intervar
 	# cube[3].data=interdq
