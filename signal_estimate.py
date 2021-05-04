@@ -8,13 +8,13 @@ import pyfits as pf
 
 
 if len(sys.argv) != 3:
-    print "Incorrect number of arguments."
+    print("Incorrect number of arguments.")
     sys.exit(1)
 
 #specify the exposure time in the last argument 
 exposure_time = sys.argv[2]
 directoryname_list = sys.argv[1:len(sys.argv)-1]
-print "list is",directoryname_list
+print("list is",directoryname_list)
 
 #initialize variables
 gain = 2.02
@@ -28,7 +28,7 @@ scal = False
 
 #looking through each directory
 for dir in directoryname_list:
-    print "First argument is", sys.argv[1]
+    print("First argument is", sys.argv[1])
 
     #change directory to each directory in argument
     os.chdir(dir)
@@ -66,7 +66,7 @@ for dir in directoryname_list:
         image_array= imagehdu[0].data
         imagehdu.close()
         name = i.split('.')[0]
-        print name
+        print(name)
         name_array = np.append(name_array,name)
         mean_array = np.append(mean_array,np.mean(image_array,axis=0))
         sd_array = np.append(sd_array,np.std(image_array,ddof=1))
