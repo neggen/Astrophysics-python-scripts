@@ -15,7 +15,7 @@ import importlib
 '''
 Script to subtract the overscan (in other words the readnoise) from the raw images. 
 Must be done first, before running the datacubes through the pipeline as the pipeline
-incorrectly handles this part. Edit filename to do other files. 
+incorrectly handles this part. Edit filename to do other files.
 '''
 
 def main():
