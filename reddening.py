@@ -9,7 +9,7 @@ import sys
 '''
 This script corrects for galactic reddening. To run, find the reddening 
 coefficient (Av) along line of sight using online database, and use latest calculated Rv for milkyway (3.1 as of 2020)
-'''
+''' 
 
 def optical_ext(wavelength,Av,Rv):
 	'''
