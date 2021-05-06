@@ -12,7 +12,7 @@ This Script takes in a list of datacubes in command line, aligns them in
 the spectral dimension, and then combines them together by using the median.
 Datacubes are assumed to be aligned spatially before this script is used.
 Median was chosen to suppress the influence of outliers that exist in the 
-datacubes, and the variance is propagated correctly as well.
+datacubes, and the variance is propagated correctly as well. 
 '''
 
 if len(sys.argv) < 3:
