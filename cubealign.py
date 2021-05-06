@@ -14,7 +14,7 @@ Takes an input of a list of 2 datacubes in command line and aligns them
 spatially by correlating the images at the various nebular lines, and finding the offset
 for the pixel with the largest correlation. Use nebular lines as they have most
 structure and are brightest. This script does not calculate any rotation when aligning 
-as the data all had the same orientation on the sky. 
+as the data all had the same orientation on the sky.
 '''
 
 def loadfits(filename):
