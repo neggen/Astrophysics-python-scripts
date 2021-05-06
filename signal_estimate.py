@@ -77,6 +77,3 @@ for dir in directoryname_list:
 
     #combine 4 arrays and write them to a textfile
     np.savetxt(results,zip(name_array,mean_array,median_array,sd_array),fmt='%20s')
-            
-
-    
