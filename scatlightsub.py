@@ -8,7 +8,8 @@ import sys
 
 '''
 Models the scattered light across the CCD and subtracts it. Does this by using the gaps between fiber bundles
-as the data points and then interpolating those gaps over the fiber bundles themselves by fitting x-axis first, and then the y-axis using the x-axis fit after independently. 
+as the data points and then interpolating those gaps over the fiber bundles themselves by fitting x-axis first, 
+and then the y-axis using the x-axis fit after independently. 
 '''
 
 def remove_outliers(vector,sigma):
