@@ -8,7 +8,7 @@ from scipy.optimize import curve_fit
 
 '''
 Takes in a datacube, fits the strongest emission lines interactively, and
-then uses the fits to calculate the redshift of the object with uncertainties properly propagated. 
+then uses the fits to calculate the redshift of the object with uncertainties properly propagated.
 '''
 
 def gauss_cont(x, a, x0, sigma, x1):
